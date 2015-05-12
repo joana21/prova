@@ -18,6 +18,7 @@ public class UtilitatBDD {
      * @param object
      */
     public void insert(InterficiBDD object){
+        
         System.out.println("DadesObjecte");
         System.out.println(object.toString());
         System.out.println(object.insert());
@@ -28,6 +29,7 @@ public class UtilitatBDD {
      * @param object
      */
     public void update(InterficiBDD object){
+        
         System.out.println("DadesObjecte");
         System.out.println(object.toString());
         System.out.println(object.update());
@@ -40,7 +42,6 @@ public class UtilitatBDD {
     public void delete(InterficiBDD object){
         System.out.println("DadesObjecte");
         System.out.println(object.toString());
-        System.out.println(object.delete());
-        
+        System.out.println(object.delete());        
     }
 }

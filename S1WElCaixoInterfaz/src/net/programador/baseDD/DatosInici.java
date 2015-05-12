@@ -37,6 +37,9 @@ public class DatosInici {
      * @return
      */
     public int insert(InterficiBDD object){
+        
+        
+        
         return 1;
     }
 
@@ -46,6 +49,9 @@ public class DatosInici {
      * @return
      */
     public int delete(InterficiBDD object){
+        
+        
+        
         return 1;
     }
 
@@ -55,6 +61,9 @@ public class DatosInici {
      * @return
      */
     public int update(InterficiBDD object){
+        
+        
+        
         return 1;
     }
     
