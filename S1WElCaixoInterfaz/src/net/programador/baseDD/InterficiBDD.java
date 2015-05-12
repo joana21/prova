@@ -10,45 +10,22 @@ package net.programador.baseDD;
  * @author alumne
  */
 public interface InterficiBDD {
-    
-    /**
-     *IP del servidor
-     */
-    public static final String ipServidor="192.108.24.0";
 
-    /**
-     *Nombre de base de datos
-     */
-    public static final String nomBDD="EL Caixo";
-
-    /**
-     *Nombre del usuario
-     */
-    public static final String nomUsuari="Empleado1";
-
-    /**
-     *Contraseña de usuario
-     */
-    public static final String contrasenya="caixo";
-    
     /**
      *Metodo para insertar
-     * @param nom
      * @return
      */
-    public int insert(String nom);
+    public String insert();
 
     /**
      **Metodo para actualizar
-     * @param nom
      * @return
      */
-    public int update(String nom);
+    public String update();
 
     /**
      **Metodo para borrar
-     * @param nom
      * @return
      */
-    public int delete(String nom);
+    public String delete();
 }
