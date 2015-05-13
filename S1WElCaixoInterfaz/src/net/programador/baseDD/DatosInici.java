@@ -5,6 +5,8 @@
  */
 package net.programador.baseDD;
 
+import net.programador.excepcion.BDDExcepcion;
+
 /**
  *
  * @author alumne
@@ -35,15 +37,17 @@ public class DatosInici {
      *Metodo que torna un numero de columnas afectada de metodo insert
      * @param object
      * @return
+     * @throws net.programador.excepcion.BDDExcepcion
      */
-    public int insert(InterficiBDD object){
+    public int insert(InterficiBDD object) throws BDDExcepcion{
         System.out.println("DadesObjecte");
         System.out.println(object.toString());
         String insert = object.insert();
-        if (insert.equalsIgnoreCase(insert)){
+        
+        if (insert.startsWith("insert")){
             System.out.println(insert);
         }else{
-            
+            throw new BDDExcepcion("Sentencia DML incorreta");
         }
         return 1;
     }
@@ -52,15 +56,16 @@ public class DatosInici {
      *Metodo que torna un numero de columnas afectada de metodo delete
      * @param object
      * @return
+     * @throws net.programador.excepcion.BDDExcepcion
      */
-    public int delete(InterficiBDD object){
+    public int delete(InterficiBDD object) throws BDDExcepcion{
         System.out.println("DadesObjecte");
         System.out.println(object.toString());
         String delete = object.delete();
         if (delete.equalsIgnoreCase(delete)){
-            System.out.println(delete);
+            System.out.println("delete");
         }else{
-            
+            throw new BDDExcepcion("Sentencia DML incorreta");
         }
         return 1;
     }
@@ -69,17 +74,24 @@ public class DatosInici {
      *Metodo que torna un numero de columnas afectada de metodo update
      * @param object
      * @return
+     * @throws net.programador.excepcion.BDDExcepcion
      */
-    public int update(InterficiBDD object){
+    public int update(InterficiBDD object) throws BDDExcepcion{
         System.out.println("DadesObjecte");
         System.out.println(object.toString());
         String update = object.update();
-        if (update.equalsIgnoreCase(update)){
+        if (update.equalsIgnoreCase("update")){
             System.out.println(update);
         }else{
-            
+            throw new BDDExcepcion("Sentencia DML incorreta");
         }
         return 1;
     }
-    
+
+    public DatosInici(String ipServidor, String nomBaseDeDatos, String nomUsuari, String contrasenya) {
+        this.ipServidor = ipServidor;
+        this.nomBaseDeDatos = nomBaseDeDatos;
+        this.nomUsuari = nomUsuari;
+        this.contrasenya = contrasenya;
+    }
 }
