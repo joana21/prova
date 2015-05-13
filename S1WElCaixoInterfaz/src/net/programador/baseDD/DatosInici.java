@@ -33,41 +33,53 @@ public class DatosInici {
         
     /**
      *Metodo que torna un numero de columnas afectada de metodo insert
-     * @param sentencia
      * @param object
      * @return
      */
-    public int insert(String sentencia, InterficiBDD object){
-        
+    public int insert(InterficiBDD object){
+        System.out.println("DadesObjecte");
+        System.out.println(object.toString());
+        String insert = object.insert();
+        if (insert.equalsIgnoreCase(insert)){
+            System.out.println(insert);
+        }else{
+            
+        }
         return 1;
     }
 
     /**
      *Metodo que torna un numero de columnas afectada de metodo delete
-     * @param sentencia
      * @param object
      * @return
      */
-    public int delete(String sentencia, InterficiBDD object){
-        
+    public int delete(InterficiBDD object){
+        System.out.println("DadesObjecte");
+        System.out.println(object.toString());
+        String delete = object.delete();
+        if (delete.equalsIgnoreCase(delete)){
+            System.out.println(delete);
+        }else{
+            
+        }
         return 1;
     }
 
     /**
      *Metodo que torna un numero de columnas afectada de metodo update
-     * @param sentencia
      * @param object
      * @return
      */
-    public int update(String sentencia, InterficiBDD object){
-        
+    public int update(InterficiBDD object){
+        System.out.println("DadesObjecte");
+        System.out.println(object.toString());
+        String update = object.update();
+        if (update.equalsIgnoreCase(update)){
+            System.out.println(update);
+        }else{
+            
+        }
         return 1;
     }
-
-    public DatosInici(String ipServidor, String nomBaseDeDatos, String nomUsuari, String contrasenya) {
-        this.ipServidor = ipServidor;
-        this.nomBaseDeDatos = nomBaseDeDatos;
-        this.nomUsuari = nomUsuari;
-        this.contrasenya = contrasenya;
-    }
+    
 }
