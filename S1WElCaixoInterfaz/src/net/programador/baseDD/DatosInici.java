@@ -33,38 +33,41 @@ public class DatosInici {
         
     /**
      *Metodo que torna un numero de columnas afectada de metodo insert
+     * @param sentencia
      * @param object
      * @return
      */
-    public int insert(InterficiBDD object){
-        
-        
+    public int insert(String sentencia, InterficiBDD object){
         
         return 1;
     }
 
     /**
      *Metodo que torna un numero de columnas afectada de metodo delete
+     * @param sentencia
      * @param object
      * @return
      */
-    public int delete(InterficiBDD object){
-        
-        
+    public int delete(String sentencia, InterficiBDD object){
         
         return 1;
     }
 
     /**
      *Metodo que torna un numero de columnas afectada de metodo update
+     * @param sentencia
      * @param object
      * @return
      */
-    public int update(InterficiBDD object){
-        
-        
+    public int update(String sentencia, InterficiBDD object){
         
         return 1;
     }
-    
+
+    public DatosInici(String ipServidor, String nomBaseDeDatos, String nomUsuari, String contrasenya) {
+        this.ipServidor = ipServidor;
+        this.nomBaseDeDatos = nomBaseDeDatos;
+        this.nomUsuari = nomUsuari;
+        this.contrasenya = contrasenya;
+    }
 }
