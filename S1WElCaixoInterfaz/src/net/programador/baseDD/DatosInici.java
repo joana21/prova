@@ -40,9 +40,7 @@ public class DatosInici {
      */
     public int insert(InterficiBDD object){
         System.out.println("DadesObjecte");
-        System.out.println(object.toString());
         String insert = object.insert();
-        
         if (insert.startsWith("Insert")){
             System.out.println(insert);
         }else{
@@ -63,7 +61,6 @@ public class DatosInici {
      */
     public int delete(InterficiBDD object) throws BDDExcepcion{
         System.out.println("DadesObjecte");
-        System.out.println(object.toString());
         String delete = object.delete();
         if (delete.startsWith("Delete")){
             System.out.println(delete);
@@ -81,7 +78,6 @@ public class DatosInici {
      */
     public int update(InterficiBDD object) throws BDDExcepcion{
         System.out.println("DadesObjecte");
-        System.out.println(object.toString());
         String update = object.update();
         if (update.startsWith("Update")){
             System.out.println(update);
