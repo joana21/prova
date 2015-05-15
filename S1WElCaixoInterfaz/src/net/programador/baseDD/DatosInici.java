@@ -5,6 +5,8 @@
  */
 package net.programador.baseDD;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import net.programador.excepcion.BDDExcepcion;
 
 /**
@@ -39,15 +41,19 @@ public class DatosInici {
      * @return
      * @throws net.programador.excepcion.BDDExcepcion
      */
-    public int insert(InterficiBDD object) throws BDDExcepcion{
+    public int insert(InterficiBDD object){
         System.out.println("DadesObjecte");
         System.out.println(object.toString());
         String insert = object.insert();
         
-        if (insert.startsWith("insert")){
+        if (insert.startsWith("Insert")){
             System.out.println(insert);
         }else{
-            throw new BDDExcepcion("Sentencia DML incorreta");
+            try {
+                throw new BDDExcepcion("Sentencia DML incorreta");
+            } catch (BDDExcepcion ex) {
+                ex.getMessage();
+            }
         }
         return 1;
     }
