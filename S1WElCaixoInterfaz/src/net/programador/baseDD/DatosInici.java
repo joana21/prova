@@ -5,6 +5,8 @@
  */
 package net.programador.baseDD;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import net.programador.excepcion.BDDExcepcion;
 
 /**
@@ -37,16 +39,20 @@ public class DatosInici {
      *Metodo que torna un numero de columnas afectada de metodo insert
      * @param object
      * @return
-     * @throws net.programador.excepcion.BDDExcepcion
      */
-    public int insert(InterficiBDD object) throws BDDExcepcion{
+    public int insert(InterficiBDD object){
         System.out.println("DadesObjecte");
         String insert = object.insert();
-        if (insert.startsWith("Insert")){
-            System.out.println(insert);
-        }else{
-            throw new BDDExcepcion("Sentencia DML incorreta");
-        }
+        
+        try {
+            if (insert.startsWith("Insert")){
+                System.out.println(insert);
+            }else{
+                throw new BDDExcepcion("Sentencia DML incorreta");
+            }
+        } catch (BDDExcepcion ex) {
+                ex.getMessage();
+            }
         return 1;
     }
 
