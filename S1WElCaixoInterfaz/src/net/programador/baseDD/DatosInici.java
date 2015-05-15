@@ -37,18 +37,15 @@ public class DatosInici {
      *Metodo que torna un numero de columnas afectada de metodo insert
      * @param object
      * @return
+     * @throws net.programador.excepcion.BDDExcepcion
      */
-    public int insert(InterficiBDD object){
+    public int insert(InterficiBDD object) throws BDDExcepcion{
         System.out.println("DadesObjecte");
         String insert = object.insert();
         if (insert.startsWith("Insert")){
             System.out.println(insert);
         }else{
-            try {
-                throw new BDDExcepcion("Sentencia DML incorreta");
-            } catch (BDDExcepcion ex) {
-                ex.getMessage();
-            }
+            throw new BDDExcepcion("Sentencia DML incorreta");
         }
         return 1;
     }
